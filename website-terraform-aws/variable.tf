@@ -20,3 +20,9 @@ variable "github_repo_name" {
   description = "GitHubのリポジトリ名"
   type        = string
 }
+
+variable "aws_profile" {
+	description = "AWS CLIのプロファイル名 (AWS SSOでログインしたプロファイル)"
+	type        = string
+	default     = "terraform-sso-user"
+}

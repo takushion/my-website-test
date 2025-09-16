@@ -17,5 +17,5 @@ terraform {
 # AWSプロバイダーの共通設定
 provider "aws" {
   region  = var.aws_region
-  profile = "terraform-test-1" # IAM Identity Centerで設定したプロファイル名
+  profile = var.aws_profile
 }

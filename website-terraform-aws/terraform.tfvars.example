@@ -10,3 +10,5 @@ project_name = "my-website-project"
 
 github_username  = "your-github-username"
 github_repo_name = "your-repo-name"
+
+aws_profile = "default"  # AWS CLIのプロファイル名を指定（必要に応じて変更）
