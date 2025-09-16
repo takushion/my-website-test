@@ -8,7 +8,7 @@ import MainLayout from './components/layouts/MainLayout';
 // 最初は全ページを読み込まず、アクセスされた時に初めて読み込むようにします。
 // これでサイトの初期表示が高速化されます。
 const HomePage = lazy(() => import('./pages/HomePage'));
-// const AboutPage = lazy(() => import('./pages/AboutPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
 // const ContactPage = lazy(() => import('./pages/ContactPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
@@ -23,6 +23,7 @@ function App() {
           {/* MainLayoutを適用したいページ群をグループ化 */}
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
             {/* <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} /> */}
           </Route>
