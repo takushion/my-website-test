@@ -12,3 +12,8 @@ output "cloudfront_distribution_id" {
   description = "デプロイ先のCloudFront ID (GitHub Actionsで使用)"
   value       = aws_cloudfront_distribution.s3_distribution.id
 }
+
+output "github_actions_role_arn" {
+  description = "GitHub Actionsが使用するIAMロールのARN (GitHub Secretsで使用)"
+  value       = aws_iam_role.github_actions_deploy_role.arn
+}

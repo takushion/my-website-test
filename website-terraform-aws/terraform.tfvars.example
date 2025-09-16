@@ -6,4 +6,7 @@
 aws_region = "ap-northeast-1"
 
 # 作成されるAWSリソースに付けられるプロジェクト名を指定
-project_name = "MyWebsiteTest"
+project_name = "my-website-project"
+
+github_username  = "your-github-username"
+github_repo_name = "your-repo-name"

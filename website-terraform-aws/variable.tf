@@ -8,5 +8,15 @@ variable "aws_region" {
 variable "project_name" {
   description = "リソースに付けるタグ用のプロジェクト名"
   type        = string
-  default     = "MyWebsiteTest"
+  default     = "my-website-project"
+}
+
+variable "github_username" {
+  description = "GitHubのユーザー名"
+  type        = string
+}
+
+variable "github_repo_name" {
+  description = "GitHubのリポジトリ名"
+  type        = string
 }
