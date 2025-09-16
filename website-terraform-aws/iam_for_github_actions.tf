@@ -2,10 +2,9 @@ resource "aws_iam_openid_connect_provider" "github" {
   url            = "https://token.actions.githubusercontent.com"
   client_id_list = ["sts.amazonaws.com"]
   # 2025年9月時点での最新のthumbprint
-	#  openssl s_client -connect token.actions.githubusercontent.com:443 -servername token.actions.githubusercontent.com -showcerts < /dev/null 2>/dev/null | \
+	# openssl s_client -connect token.actions.githubusercontent.com:443 -servername token.actions.githubusercontent.com -showcerts < /dev/null 2>/dev/null | \
   # awk '/BEGIN CERTIFICATE/,/END CERTIFICATE/ {print $0}' | \
   # openssl x509 -fingerprint -sha1 -noout -in /dev/stdin
-	
   thumbprint_list = ["7560d6f40fa55195f740ee2b1b7c0b4836cbe103"]
 }
 

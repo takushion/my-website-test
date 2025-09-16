@@ -23,7 +23,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     target_origin_id = "S3-${var.project_name}"
 
     viewer_protocol_policy = "redirect-to-https"
-		forwarded_values {
+    forwarded_values {
       # クエリ文字列（例: ?id=123）をS3に転送しない
       query_string = false
 
