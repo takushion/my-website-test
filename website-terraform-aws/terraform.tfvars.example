@@ -1,0 +1,9 @@
+
+# このファイルをコピーして`terraform.tfvars`という名前で保存
+# 以下の変数に適切な値を設定
+
+# AWSリソースを作成するリージョンを指定
+aws_region = "ap-northeast-1"
+
+# 作成されるAWSリソースに付けられるプロジェクト名を指定
+project_name = "MyWebsiteTest"

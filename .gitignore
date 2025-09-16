@@ -21,3 +21,22 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Terraform 
+# ローカルの状態ファイル (非常に機密性が高いらしい)
+*.tfstate
+*.tfstate.backup
+
+# Terraformのプラグインやモジュール (initで自動生成されるもの
+.terraform/
+
+# 変数ファイル (シークレット情報を含む可能性があるから自分で作成する）
+*.tfvars
+
+# 実行計画ファイル (機密情報を含む可能性があるらしい
+*.tfplan
+tfplan
+
+# クラッシュログ
+crash.log
+crash.*.log
