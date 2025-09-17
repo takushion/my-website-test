@@ -17,7 +17,13 @@ const TitleAndList: React.FC<TitleAndListProps> = ({ title, itemsList }) => {
           <h4>{sublist.title}</h4>
           <ul>
             {sublist.items.map((item, subIdx) => (
-              <li key={subIdx}>{item}</li>
+              <li key={subIdx}>
+                {item.startsWith("http") ? (
+                  <a href={item} target="_blank" rel="noopener noreferrer">{item}</a>
+                ) : (
+                  item
+                )}
+              </li>
             ))}
           </ul>
           <hr />

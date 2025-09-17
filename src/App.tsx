@@ -9,7 +9,8 @@ import MainLayout from './components/layouts/MainLayout';
 // これでサイトの初期表示が高速化されます。
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
-// const ContactPage = lazy(() => import('./pages/ContactPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const MyFriendsPage = lazy(() => import('./pages/MyFriendsPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/friends" element={<MyFriendsPage />} />
             {/* <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} /> */}
           </Route>
