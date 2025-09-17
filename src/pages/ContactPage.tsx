@@ -1,6 +1,6 @@
 import React from "react";
-import TitleAndList from "../components/TitleAndList";
-import type { TitleAndListProps } from "../components/TitleAndList";
+import TitleAndList from "../components/TitleAndList/TitleAndList";
+import type { TitleAndListProps } from "../components/TitleAndList/TitleAndList";
 
 const ContactPage = () => {
   const contact: TitleAndListProps = {
@@ -28,4 +28,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-

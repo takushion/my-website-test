@@ -1,6 +1,6 @@
 import React from "react";
-import TitleAndList from "../components/TitleAndList";
-import type { TitleAndListProps } from "../components/TitleAndList";
+import TitleAndList from "../components/TitleAndList/TitleAndList";
+import type { TitleAndListProps } from "../components/TitleAndList/TitleAndList";
 
 const AboutPage = () => {
   const affiliation: TitleAndListProps = {
@@ -18,27 +18,15 @@ const AboutPage = () => {
     itemsList: [
       {
         title: "ゲーム実況",
-        items: [
-          "TOP4",
-          "非公開ズ",
-          "わくバン",
-          "最俺",
-        ],
+        items: ["TOP4", "非公開ズ", "わくバン", "最俺"],
       },
       {
         title: "身体を動かすこと",
-        items: [
-          "自転車(最近始めた)",
-          "筋トレ",
-          "卓球(もうやめた)",
-        ],
+        items: ["自転車(最近始めた)", "筋トレ", "卓球(もうやめた)"],
       },
       {
         title: "YouTube",
-        items: [
-          "板橋ハウス",
-          "転々飯店",
-        ],
+        items: ["板橋ハウス", "転々飯店"],
       },
       {
         title: "漫画",
@@ -51,10 +39,8 @@ const AboutPage = () => {
       },
       {
         title: "収集",
-        items: [
-          "柔軟剤",
-        ],
-      }
+        items: ["柔軟剤"],
+      },
     ],
   };
   return (
@@ -67,4 +53,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-

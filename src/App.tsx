@@ -26,9 +26,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/friends" element={<MyFriendsPage />} />
-            {/* <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} /> */}
+            <Route path="/myfriends" element={<MyFriendsPage />} />
           </Route>
 
           {/* 上記のどのルートにも一致しなかった場合に表示されます。
