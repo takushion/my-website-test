@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./TitleAndList.module.scss";
 
 type TitleAndListProps = {
   title: string;
@@ -10,16 +11,16 @@ type TitleAndListProps = {
  */
 const TitleAndList: React.FC<TitleAndListProps> = ({ title, itemsList }) => {
   return (
-    <section>
-      <h3>{title}</h3>
+    <section className={styles.container}>
+      <h3 className={styles.mainTitle}>{title}</h3>
       {itemsList.map((sublist, idx) => (
-        <div key={idx}>
-          <h4>{sublist.title}</h4>
+        <div key={idx} className={styles.sublistContainer}>
+          <h4 className={styles.sublistTitle}>{sublist.title}</h4>
           <ul>
             {sublist.items.map((item, subIdx) => (
-              <li key={subIdx}>
+              <li key={subIdx} className={styles.listItem}>
                 {item.startsWith("http") ? (
-                  <a href={item} target="_blank" rel="noopener noreferrer">{item}</a>
+                  <a href={item} target="_blank" rel="noopener noreferrer" className={styles.link}>{item}</a>
                 ) : (
                   item
                 )}
@@ -29,7 +30,6 @@ const TitleAndList: React.FC<TitleAndListProps> = ({ title, itemsList }) => {
           <hr />
         </div>
       ))}
-      <hr />
     </section>
   );
 };
