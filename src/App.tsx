@@ -1,9 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-// レイアウトコンポーネント
 import MainLayout from './components/layouts/MainLayout';
-import "nes.css/css/nes.min.css";
 
 // --- ページの遅延読み込み（Lazy Loading） ---
 // 最初は全ページを読み込まず、アクセスされた時に初めて読み込むようにします。

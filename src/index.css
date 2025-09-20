@@ -1,13 +1,20 @@
+@font-face {
+  font-family: "NuMochi"; /* CSSで使うための名前を定義 */
+  src: url("./assets/fonts/NuAnkoMochiCt-Reg.otf") format("truetype");
+}
+@font-face {
+  font-family: "MisakiGothic"; /* CSSで使うための名前を定義 */
+  src: url("./assets/fonts/misaki_gothic_2nd.ttf") format("truetype");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "MisakiGothic","NuMochi", "Press Start 2P", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
