@@ -1,0 +1,8 @@
+.sectionMargin {
+  margin: 2rem 0; // 上下に2remの余白（必要に応じて調整）
+}
+.longButton {
+  padding: 0.25em 1.5em;   // 高さを抑え、横幅を広めに
+  font-size: 0.9em;        // 文字サイズも調整（必要に応じて）
+  min-width: 100px;        // 最小横幅（必要に応じて調整）
+}
