@@ -11,26 +11,37 @@ type TitleAndListProps = {
  */
 const TitleAndList: React.FC<TitleAndListProps> = ({ title, itemsList }) => {
   return (
-    <section className={styles.container}>
-      <h3 className={styles.mainTitle}>{title}</h3>
-      {itemsList.map((sublist, idx) => (
-        <div key={idx} className={styles.sublistContainer}>
-          <h4 className={styles.sublistTitle}>{sublist.title}</h4>
-          <ul>
-            {sublist.items.map((item, subIdx) => (
-              <li key={subIdx} className={styles.listItem}>
-                {item.startsWith("http") ? (
-                  <a href={item} target="_blank" rel="noopener noreferrer" className={styles.link}>{item}</a>
-                ) : (
-                  item
-                )}
-              </li>
-            ))}
-          </ul>
-          <hr />
-        </div>
-      ))}
-    </section>
+    <>
+      <br />
+      <section
+        className={`nes-container is-rounded with-title ${styles.sectionMargin}`}
+      >
+        <h2 className="title">{title}</h2>
+        {itemsList.map((sublist, idx) => (
+          <div key={idx}>
+            <h3>{sublist.title}</h3>
+            <ul className="nes-list is-disc">
+              {sublist.items.map((item, subIdx) => (
+                <li key={subIdx}>
+                  {item.startsWith("http") ? (
+                    <button
+                      type="button"
+                      className={"nes-btn is-primary " + styles.longButton}
+                      onClick={() => window.open(item, "_blank")}
+                    >
+                      LINK
+                    </button>
+                  ) : (
+                    item
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+      <br />
+    </>
   );
 };
 

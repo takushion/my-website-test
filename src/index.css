@@ -9,6 +9,8 @@
 
 body {
   margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   font-family: "MisakiGothic","NuMochi", "Press Start 2P", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

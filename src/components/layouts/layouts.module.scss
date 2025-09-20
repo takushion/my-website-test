@@ -1,0 +1,21 @@
+.navHorizontal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-items: stretch;
+  width: 100%;
+
+  a,
+  button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navHorizontal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
