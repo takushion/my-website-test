@@ -1,27 +1,27 @@
 import React from "react";
-import styles from "./layouts.module.scss"; 
+import { Link, useLocation } from "react-router-dom";
+import styles from "./layouts.module.scss";
 
 const Header = () => {
-  const sitePath = window.location.pathname;
+  const location = useLocation();
+  const sitePath = location.pathname;
   return (
     <header>
       <h1>おれおまんじゅ日記({sitePath})</h1>
-      <br />
       <nav className={styles.navHorizontal}>
-        <button type="button" className="nes-btn" onClick={() => window.location.href = '/'}>
-          Normal
-        </button>
-        <button type="button" className="nes-btn" onClick={() => window.location.href = '/about'}>
+        <Link className="nes-btn" to="/">
+          Home
+        </Link>
+        <Link className="nes-btn" to="/about">
           About
-        </button>
-        <button type="button" className="nes-btn" onClick={() => window.location.href = '/contact'}>
+        </Link>
+        <Link className="nes-btn" to="/contact">
           Contact
-        </button>
-        <button type="button" className="nes-btn" onClick={() => window.location.href = '/myfriends'}>
+        </Link>
+        <Link className="nes-btn" to="/myfriends">
           My Friends
-        </button> 
+        </Link>
       </nav>
-      <br />
     </header>
   );
 };
