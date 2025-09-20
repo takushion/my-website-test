@@ -1,12 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+/**
+ * @license
+ * このスクリプトは、BCrikko氏が作成したコードを一部利用しています。
+ *
+ * Original library name - v1.0.0
+ * Copyright (c) 2018 BCrikko
+ * Released under the MIT license.
+ * https://opensource.org/licenses/mit-license.php
+ */
+
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "nes.css/css/nes.min.css";
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
