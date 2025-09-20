@@ -1,6 +1,6 @@
 @font-face {
   font-family: "NuMochi"; /* CSSで使うための名前を定義 */
-  src: url("./assets/fonts/NuAnkoMochiCt-Reg.otf") format("truetype");
+  src: url("./assets/fonts/NuAnkoMochiCt-Reg.otf") format("opentype");
 }
 @font-face {
   font-family: "MisakiGothic"; /* CSSで使うための名前を定義 */

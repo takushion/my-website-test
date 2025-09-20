@@ -27,7 +27,7 @@ const TitleAndList: React.FC<TitleAndListProps> = ({ title, itemsList }) => {
                     <button
                       type="button"
                       className={"nes-btn is-primary " + styles.longButton}
-                      onClick={() => window.open(item, "_blank")}
+                      onClick={() => window.open(item, "_blank", "noopener,noreferrer")}
                     >
                       LINK
                     </button>
