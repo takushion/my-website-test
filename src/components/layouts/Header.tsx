@@ -1,27 +1,13 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import styles from "./layouts.module.scss";
 
 const Header = () => {
-  const location = useLocation();
-  const sitePath = location.pathname;
   return (
-    <header>
-      <h1>おれおまんじゅ日記({sitePath})</h1>
-      <nav className={styles.navHorizontal}>
-        <Link className="nes-btn" to="/">
-          Home
-        </Link>
-        <Link className="nes-btn" to="/about">
-          About
-        </Link>
-        <Link className="nes-btn" to="/contact">
-          Contact
-        </Link>
-        <Link className="nes-btn" to="/myfriends">
-          My Friends
-        </Link>
-      </nav>
+    <header style={{
+      textAlign: "center",
+      padding: "1rem",
+      borderBottom: "1px solid rgba(0,0,0,0.1)",
+    }}>
+      <h1 style={{ fontSize: "1.5rem", margin: 0 }}>佐藤匠真</h1>
     </header>
   );
 };

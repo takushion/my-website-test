@@ -2,7 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('初期ロード時にローディング表示が出ること', async () => {
+test('MazeCanvas がレンダリングされること', () => {
   render(<App />);
-  expect(screen.getByText('Loading...')).toBeInTheDocument();
+  const canvas = document.querySelector('canvas');
+  expect(canvas).toBeInTheDocument();
 });
