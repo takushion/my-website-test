@@ -26,7 +26,7 @@ const TitleAndList: React.FC<TitleAndListProps> = ({ title, itemsList }) => {
                   {item.startsWith("http") ? (
                     <button
                       type="button"
-                      className={"nes-btn is-primary " + styles.longButton}
+                      className={"nes-btn is-success " + styles.longButton}
                       onClick={() => window.open(item, "_blank", "noopener,noreferrer")}
                     >
                       LINK
