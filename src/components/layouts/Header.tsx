@@ -7,7 +7,7 @@ const Header = () => {
       padding: "1rem",
       borderBottom: "1px solid rgba(0,0,0,0.1)",
     }}>
-      <h1 style={{ fontSize: "1.5rem", margin: 0 }}>Name: 佐藤匠真</h1>
+      <h1 style={{ fontSize: "3.5rem", margin: 0 }}>My Website</h1>
     </header>
   );
 };

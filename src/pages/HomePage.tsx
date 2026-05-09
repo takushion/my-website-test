@@ -7,6 +7,10 @@ const HomePage = () => {
     title: "Profile",
     itemsList: [
       {
+        title: "名前",
+        items: ["佐藤匠真"],
+      },
+      {
         title: "大学",
         items: ["筑波大学 情報学群 知識情報・図書館学類"],
       },
@@ -66,23 +70,23 @@ const HomePage = () => {
     title: "Career",
     itemsList: [
       {
-        title: "2023/04-現在",
+        title: "2023/04 - 現在",
         items: ["筑波大学,情報学群,知識情報・図書館学類"],
       },
       {
-        title: "2024/09-2025/03",
+        title: "2024/09 - 2025/03",
         items: ["スパイラル株式会社,インターン,インサイドセールス"],
       },
       {
-        title: "2025/03-2026/05",
+        title: "2025/03 - 2026/05",
         items: ["株式会社Techouse,インターン,労務系事業部,エンジニア"],
       },
       {
-        title: "2026/01-2026/04",
+        title: "2026/01 - 2026/04",
         items: ["株式会社アイネット,インターン,宇宙開発系事業部,エンジニア"],
       },
       {
-        title: "2026/05-現在",
+        title: "2026/05 - 現在",
         items: ["株式会社SIGQ,インターン,エンジニア"],
       },
     ],
@@ -130,12 +134,12 @@ const HomePage = () => {
 
   return (
     <div>
-      <h2>Profile</h2>
+      <h2 style={{ fontSize: "2rem" }}>About Me</h2>
       <TitleAndList {...profile} />
       <TitleAndList {...hobbies} />
       <TitleAndList {...certification} />
       <TitleAndList {...career} />
-      <h2>Links</h2>
+      <h2 style={{ fontSize: "2rem" }}>Links</h2>
       <TitleAndList {...contact} />
       <TitleAndList {...friends} />
     </div>

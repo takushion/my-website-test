@@ -16,7 +16,7 @@ const TitleAndList: React.FC<TitleAndListProps> = ({ title, itemsList }) => {
       <section
         className={`nes-container is-rounded with-title ${styles.sectionMargin}`}
       >
-        <h2 className="title">{title}</h2>
+        <h2 className="title" style={{ backgroundColor: "rgba(26, 58, 26, 0.75)", color: "#fff", fontSize: "1.8rem" }}>{title}</h2>
         {itemsList.map((sublist, idx) => (
           <div key={idx}>
             <h3>{sublist.title}</h3>
