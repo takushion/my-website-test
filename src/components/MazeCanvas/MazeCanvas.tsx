@@ -290,21 +290,59 @@ function isPath(pos: Position, grid: ("wall" | "path")[][], cols: number, rows: 
 function followLeader(f: AgentState | undefined, h: Position[], d: number, dir: Direction): void { if (!f || h.length === 0) return; const i = Math.max(0, h.length - 1 - d); f.pos = { ...h[i] }; f.direction = dir; }
 function easeOut(t: number): number { return 1 - Math.pow(1 - t, 3); }
 
-/** 充電風プログレスバーを Canvas に描画 */
+/** 充電風バッテリーメーターを Canvas 中央に描画 */
 function drawProgress(ctx: CanvasRenderingContext2D, step: number, total: number): void {
   const w = ctx.canvas.width, h = ctx.canvas.height;
-  const barW = Math.min(w * 0.7, 500), barH = 28;
-  const x = (w - barW) / 2, y = h * 0.85;
   const ratio = Math.min(1, step / total);
   const pct = Math.floor(ratio * 100);
-  ctx.fillStyle = "rgba(0,0,0,0.7)"; ctx.fillRect(x - 4, y - 4, barW + 8, barH + 8);
-  ctx.strokeStyle = "#4a9"; ctx.lineWidth = 3; ctx.strokeRect(x, y, barW, barH);
-  ctx.fillStyle = "#4a9"; ctx.fillRect(x + 2, y + 2, (barW - 4) * ratio, barH - 4);
-  ctx.fillStyle = "#fff"; ctx.font = "bold 16px 'Press Start 2P', monospace";
-  ctx.textAlign = "center"; ctx.textBaseline = "middle";
-  ctx.fillText(`${pct}%`, w / 2, y + barH / 2);
-  ctx.font = "12px 'Press Start 2P', monospace";
-  ctx.fillText("CHARGING...", w / 2, y - 18);
+
+  // バッテリーサイズ
+  const bw = 160, bh = 70;
+  const bx = (w - bw) / 2, by = (h - bh) / 2;
+
+  // バッテリーの頭（突起）
+  const capW = 20, capH = 10;
+  ctx.fillStyle = "#aaa";
+  ctx.fillRect(bx + bw - capW - 4, by - capH, capW + 8, capH + 4);
+
+  // 枠
+  ctx.fillStyle = "#222";
+  ctx.fillRect(bx - 3, by - 3, bw + 6, bh + 6);
+  ctx.fillStyle = "#111";
+  ctx.fillRect(bx, by, bw, bh);
+
+  // 内部（空）
+  const padding = 6;
+  ctx.fillStyle = "#1a1a1a";
+  ctx.fillRect(bx + padding, by + padding, bw - padding * 2, bh - padding * 2);
+
+  // 充填（レベルに応じて色変化: 赤→黄→緑）
+  const fillW = (bw - padding * 2) * ratio;
+  let fillColor = "#4CAF50";
+  if (ratio < 0.3) fillColor = "#f44336";
+  else if (ratio < 0.7) fillColor = "#FF9800";
+
+  ctx.fillStyle = fillColor;
+  ctx.fillRect(bx + padding, by + padding, fillW, bh - padding * 2);
+
+  // 区切り線（電池のセル風）
+  ctx.fillStyle = "#111";
+  const segs = 5;
+  for (let i = 1; i < segs; i++) {
+    const sx = bx + padding + (bw - padding * 2) * (i / segs);
+    ctx.fillRect(sx - 1, by + padding, 2, bh - padding * 2);
+  }
+
+  // パーセント文字（中央）
+  ctx.fillStyle = "#fff";
+  ctx.font = "bold 22px 'Press Start 2P', monospace";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(`${pct}%`, bx + bw / 2, by + bh / 2);
+
+  // ラベル（バッテリー上部）
+  ctx.font = "11px 'Press Start 2P', monospace";
+  ctx.fillText("CHARGING", w / 2, by - capH - 18);
 }
 
 export default MazeCanvas;

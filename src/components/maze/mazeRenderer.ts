@@ -10,7 +10,7 @@ import { CellType, Position } from "./types";
 /** 森テーマの色パレット */
 const WALL_COLOR = "#1a3a1a";
 const PATH_COLOR = "#4a6b3a";
-const HIGHLIGHT_COLOR = "#e05040";
+const HIGHLIGHT_COLOR = "#fac72e";
 const WALL_TOP = "#2d5a27";
 
 /**
