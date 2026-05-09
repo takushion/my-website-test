@@ -40,3 +40,5 @@ tfplan
 # クラッシュログ
 crash.log
 crash.*.log
+
+*.md
