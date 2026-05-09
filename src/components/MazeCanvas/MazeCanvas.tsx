@@ -67,8 +67,12 @@ const MazeCanvas: React.FC<MazeCanvasProps> = ({ onPhaseChange }) => {
     onPCRef.current(skipInit ? "BUILDING" : "INIT");
   }, []);
 
-  // ----- アニメーションループ -----
+  // ----- アニメーションループ + 初期化 -----
   useEffect(() => {
+    // 先にキャンバスを画面サイズにリサイズ（これが重要）
+    const c = canvasRef.current;
+    if (c) { c.width = window.innerWidth; c.height = window.innerHeight; }
+
     resetMaze(false);
     let id: number;
     const loop = () => { const ctx = canvasRef.current?.getContext("2d"); if (ctx) update(ctx); id = requestAnimationFrame(loop); };
