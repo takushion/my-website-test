@@ -57,10 +57,15 @@ const HomePage = () => {
     title: "Certification",
     itemsList: [
       {
-        title: "ゲーム実況",
+        title: "IPA",
         items: [
           "基本情報技術者試験合格",
           "応用情報技術者試験合格",
+        ],
+      },
+      {
+        title: "AWS",
+        items: [
           "AWS Certified Solutions Architect - Associate",
         ],
       },
