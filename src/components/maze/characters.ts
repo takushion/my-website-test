@@ -104,7 +104,6 @@ function drawChinchilla(
     ctx.fillRect(x + rx * pixelSize, y + ry * pixelSize, pixelSize, pixelSize);
   });
 }
-
 export const CHARACTERS: CharacterDrawFn[] = STYLES.map((style) => (
   ctx, x, y, size, direction
 ) => drawChinchilla(style, ctx, x, y, size, direction));
