@@ -91,8 +91,14 @@ const HomePage = () => {
         items: ["株式会社アイネット,インターン,宇宙開発系事業部,エンジニア"],
       },
       {
-        title: "2026/05 - 現在",
+        title: "2026/05 - 2026/08",
         items: ["株式会社SIGQ,インターン,エンジニア"],
+      },
+      {
+        title: "2026/09 - 現在",
+        items: [
+          "産業技術総合研究所エージェントAIチーム,テクニカルスタッフ",
+        ],
       },
     ],
   };
@@ -108,10 +114,6 @@ const HomePage = () => {
         title: "GitHub",
         items: ["https://github.com/takushion"],
       },
-      {
-        title: "X(Twitter)",
-        items: ["https://x.com/oreomanju_itf"],
-      },
     ],
   };
 
@@ -124,7 +126,7 @@ const HomePage = () => {
       },
       {
         title: "ロマノフ",
-        items: ["https://romablog-lime.vercel.app"],
+        items: ["https://romanohu.github.io/"],
       },
       {
         title: "ずきも",

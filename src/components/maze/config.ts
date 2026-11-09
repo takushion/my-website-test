@@ -7,6 +7,9 @@
 /** 全フェーズ共通の tick 間隔（フレーム数） */
 export const TICK = 20;
 
+/** 充電演出の tick 間隔（通常の半分＝充電速度2倍） */
+export const CHARGE_TICK = Math.max(1, Math.floor(TICK / 2));
+
 /** 掘削用 tick（TICKの1/2＝倍速） */
 export const BUILD_TICK = Math.floor(TICK / 2);
 

@@ -16,7 +16,7 @@ import { drawMaze, drawCellHighlight, gridToCanvas } from "../maze/mazeRenderer"
 import { CHARACTERS, pickRandomCharacters, CharacterDrawFn } from "../maze/characters";
 import { moveAgents as moveAgentsFn } from "../maze/movement";
 import {
-  TICK, BUILD_TICK, INIT_STEPS,
+  TICK, BUILD_TICK, CHARGE_TICK, INIT_STEPS,
   ENTER_TOTAL_FRAMES, ENTER_GAP_FRAMES,
 } from "../maze/config";
 import styles from "./MazeCanvas.module.scss";
@@ -131,7 +131,7 @@ function initTick(st: MazeState, ctx: CanvasRenderingContext2D): void {
   ctx.fillStyle = "#000";
   ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   st.tick++;
-  if (st.tick >= TICK) { st.tick = 0; st.initStep++; }
+  if (st.tick >= CHARGE_TICK) { st.tick = 0; st.initStep++; }
   if (st.initStep >= INIT_STEPS) { st.phase = "BUILDING"; return; }
   drawBattery(ctx, st.initStep, INIT_STEPS);
 }
